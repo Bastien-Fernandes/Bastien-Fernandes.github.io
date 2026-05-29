@@ -85,16 +85,15 @@
                 <div class="order-1 md:order-2">
                     <h1 class="text-3xl font-bold mb-4 text-gray-800">CV de Bastien FERNANDES</h1>
                     <h2 class="text-xl text-blue-600 mb-6 font-semibold">Étudiant en BUT Informatique</h2>
-                    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-blue-500">
-                        <p>
-                            Actuellement étudiant en BUT Informatique à l'IUT de Lille, je suis passionné par le
-                            développement d'applications et la conception logicielle. Curieux et persévérant, j'ai
-                            acquis des bases solides en algorithmique, développement web et bases de données SQL.
+                    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-blue-500 text-sm">
+                        <p class="mb-3">
+                            <strong class="text-blue-800">Mon profil :</strong> Actuellement étudiant en BUT Informatique à l'IUT de Lille, je suis passionné par le développement d'applications et la conception logicielle. Curieux et persévérant, j'ai acquis des bases solides en algorithmique, développement web et bases de données SQL.
+                        </p>
+                        <p class="mb-3">
+                            <strong class="text-blue-800">Mes centres d'intérêt professionnels :</strong> Je m'intéresse particulièrement aux architectures N-Tiers, à la gestion de projet et à la création d'outils internes pour faciliter la vie des utilisateurs, comme j'ai pu le faire lors de mes expériences.
                         </p>
                         <p>
-                            En vue de ma troisième année, je suis à la recherche d'une alternance en contrat
-                            d'apprentissage pour l'année 2026-2027. Fort de mes expériences techniques et humaines, je
-                            souhaite m'investir pleinement dans des projets concrets au sein de votre entreprise.
+                            <strong class="text-blue-800">Mon projet d'orientation :</strong> En vue de ma troisième année, je suis à la recherche d'une alternance en contrat d'apprentissage pour l'année 2026-2027 en tant que développeur. Mon objectif à terme est de devenir un concepteur développeur autonome, capable de piloter des projets de A à Z.
                         </p>
                     </div>
                 </div>
@@ -176,9 +175,9 @@
                         <div class="font-bold text-xl mb-4 text-blue-700">INFORMATIQUE</div>
                         <div class="branch-group items-end"
                             style="border-left: none; border-right: 4px solid #cbd5e1; padding-right: 20px; padding-left: 0; margin-right: 20px; margin-left: 0;">
-                            <div class="node"><strong>Web</strong><br><span class="text-xs">HTML5 / CSS3</span></div>
-                            <div class="node"><strong>Dev</strong><br><span class="text-xs">Java, C, C++</span></div>
-                            <div class="node"><strong>BDD</strong><br><span class="text-xs">SQL</span></div>
+                            <div class="node"><strong>Web</strong><br><span class="text-xs">HTML5, CSS3, JavaScript</span></div>
+                            <div class="node"><strong>Dev</strong><br><span class="text-xs">Java, C, C++, C#, XAML</span></div>
+                            <div class="node"><strong>BDD</strong><br><span class="text-xs">SQL, PostgreSQL, SQL Server</span></div>
                         </div>
                     </div>
                     <div class="flex flex-col items-center md:items-start">
@@ -202,19 +201,20 @@
 
             <!-- NOUVELLE EXPÉRIENCE: Euro Information -->
             <div class="mb-8 pl-4 border-l-4 border-blue-500">
-                <h3 class="text-xl font-bold">Stagiaire Développement d'Applications</h3>
+                <h3 class="text-xl font-bold">Stagiaire/CDD Développement d'Applications</h3>
                 <div class="flex justify-between text-sm text-gray-500 mb-2">
                     <span>Euro Information</span>
-                    <span>06 Avril 2026 - 12 Juin 2026</span>
+                    <span>06 Avril 2026 - 27 Août 2026</span>
                 </div>
                 <p>
-                    Réécriture complète d'une application existante et développement de nouvelles fonctionnalités.
-                    Gestion autonome du projet de A à Z.
+                    Conception et développement d'un outil de recherche multicritères en interne destiné aux
+                    collaborateurs, permettant de consulter l'historique des fiches clients sur les 10 derniers jours.
                 </p>
                 <ul class="list-disc ml-5 mb-2 text-sm text-gray-700">
-                    <li>Analyse des besoins et rédaction du cahier des charges.</li>
-                    <li>Développement, refactoring et ajout de fonctionnalités.</li>
-                    <li>Tests unitaires, recette et déploiement de la solution en production.</li>
+                    <li>Recueil des besoins, analyse et rédaction des spécifications techniques et fonctionnelles.</li>
+                    <li>Conception d'une interface utilisateur (maquettage) respectant les normes ergonomiques de l'entreprise et les besoins des utilisateurs.</li>
+                    <li>Développement de l'application en C# et XAML au sein d'une architecture N-Tiers (IHM > API > KIT SQL > SQL).</li>
+                    <li>Modélisation de la base de données et création des requêtes SQL.</li>
                 </ul>
             </div>
 
@@ -229,14 +229,6 @@
                     <li>Gestion de conflits, travail en équipe.</li>
                     <li>Responsabilité et sécurité des mineurs.</li>
                 </ul>
-            </div>
-            <div class="mb-8 pl-4 border-l-4 border-gray-200">
-                <h3 class="text-xl font-bold">Agent Administratif</h3>
-                <div class="flex justify-between text-sm text-gray-500 mb-2">
-                    <span>Conrad Sequedin</span>
-                    <span>1 semaine (Job d'été)</span>
-                </div>
-                <p>Mission administrative courte durée.</p>
             </div>
         </section>
 
@@ -256,95 +248,137 @@
 
             <div class="grid md:grid-cols-2 gap-6">
 
-                <!-- PROJET 1 : SAE 3.02 -->
-                <div
-                    class="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-md transition flex flex-col justify-between">
+                <!-- PROJET 7 : Shootlevia -->
+                <div onclick="openModal('shootlevia')"
+                    class="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-lg hover:-translate-y-1 transition transform cursor-pointer flex flex-col justify-between group">
                     <div>
                         <div class="flex items-center justify-between mb-4">
-                            <h3 class="font-bold text-lg text-blue-800">SAÉ 3.02 - Développement d'Application</h3>
+                            <h3 class="font-bold text-lg text-blue-800 group-hover:text-blue-600 transition">Shootlevia</h3>
+                            <i class="fas fa-gamepad text-orange-500 text-xl"></i>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-2">Jeu Web Multijoueur</p>
+                        <p class="text-sm text-gray-700 mb-4">
+                            Jeu shoot-'em-up synchronisé en temps réel (60 FPS) basé sur une architecture Client/Serveur WebSockets.
+                        </p>
+                        <span class="text-xs font-semibold bg-gray-100 px-2 py-1 rounded text-gray-600 mb-2 inline-block">TypeScript / Socket.io</span>
+                    </div>
+                    <div class="text-sm mt-4 text-blue-600 font-semibold flex items-center">
+                        <i class="fas fa-plus-circle mr-1"></i> Plus d'infos
+                    </div>
+                </div>
+
+                <!-- PROJET 6 : EcoDrop -->
+                <div onclick="openModal('ecodrop')"
+                    class="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-lg hover:-translate-y-1 transition transform cursor-pointer flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="font-bold text-lg text-blue-800 group-hover:text-blue-600 transition">EcoDrop API</h3>
+                            <i class="fas fa-leaf text-green-600 text-xl"></i>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-2">SAÉ 4.A.01.2</p>
+                        <p class="text-sm text-gray-700 mb-4">
+                            Création d'une API REST de gestion de points de collecte de déchets. Architecture Java EE et base PostgreSQL.
+                        </p>
+                        <span class="text-xs font-semibold bg-gray-100 px-2 py-1 rounded text-gray-600 mb-2 inline-block">Java EE / REST</span>
+                    </div>
+                    <div class="text-sm mt-4 text-blue-600 font-semibold flex items-center">
+                        <i class="fas fa-plus-circle mr-1"></i> Plus d'infos
+                    </div>
+                </div>
+
+                <!-- PROJET 5 : SAE 3.03 -->
+                <div onclick="openModal('sae303')"
+                    class="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-lg hover:-translate-y-1 transition transform cursor-pointer flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="font-bold text-lg text-blue-800 group-hover:text-blue-600 transition">SAÉ 3.03 - Déploiement d'une App</h3>
+                            <i class="fas fa-server text-purple-500 text-xl"></i>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-2">Projet de Semestre 3</p>
+                        <p class="text-sm text-gray-700 mb-4">
+                            Déploiement d'une solution de communication Matrix (Synapse, Element Web) et configuration système.
+                        </p>
+                        <span class="text-xs font-semibold bg-gray-100 px-2 py-1 rounded text-gray-600 mb-2 inline-block">Système / Réseau</span>
+                    </div>
+                    <div class="text-sm mt-4 text-blue-600 font-semibold flex items-center">
+                        <i class="fas fa-plus-circle mr-1"></i> Plus d'infos
+                    </div>
+                </div>
+
+                <!-- PROJET 1 : SAE 3.02 -->
+                <div onclick="openModal('sae302')"
+                    class="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-lg hover:-translate-y-1 transition transform cursor-pointer flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="font-bold text-lg text-blue-800 group-hover:text-blue-600 transition">SAÉ 3.02 - Développement d'Application</h3>
                             <i class="fas fa-project-diagram text-blue-500 text-xl"></i>
                         </div>
                         <p class="text-xs text-gray-500 mb-2">Projet de Semestre 3</p>
                         <p class="text-sm text-gray-700 mb-4">
-                            Développement d'application communicante. Conception et mise en œuvre d'une solution
-                            logicielle robuste.
+                            Développement d'application communicante. Conception et mise en œuvre d'une solution logicielle robuste.
                         </p>
-                        <span
-                            class="text-xs font-semibold bg-gray-100 px-2 py-1 rounded text-gray-600 mb-2 inline-block">SAÉ
-                            3.02</span>
+                        <span class="text-xs font-semibold bg-gray-100 px-2 py-1 rounded text-gray-600 mb-2 inline-block">SAÉ 3.02</span>
                     </div>
-                    <a href="https://github.com/bastien-fernandes/sae302" target="_blank"
-                        class="proof-link text-sm mt-4 block">
-                        <i class="fab fa-github"></i> Voir le code sur GitHub
-                    </a>
+                    <div class="text-sm mt-4 text-blue-600 font-semibold flex items-center">
+                        <i class="fas fa-plus-circle mr-1"></i> Plus d'infos
+                    </div>
                 </div>
 
                 <!-- PROJET 2 : Méthode Agile SCRUM -->
-                <div
-                    class="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-md transition flex flex-col justify-between">
+                <div onclick="openModal('scrum')"
+                    class="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-lg hover:-translate-y-1 transition transform cursor-pointer flex flex-col justify-between group">
                     <div>
                         <div class="flex items-center justify-between mb-4">
-                            <h3 class="font-bold text-lg text-blue-800">Méthode Agile SCRUM</h3>
+                            <h3 class="font-bold text-lg text-blue-800 group-hover:text-blue-600 transition">Méthode Agile SCRUM</h3>
                             <i class="fas fa-tasks text-green-500 text-xl"></i>
                         </div>
-                        <p class="text-xs text-gray-500 mb-2">Gestion de Projet</p>
+                        <p class="text-xs text-gray-500 mb-2">Projet de Semestre 3</p>
                         <p class="text-sm text-gray-700 mb-4">
-                            Mise en application de la méthodologie Agile Scrum : gestion de backlog, sprints et travail
-                            collaboratif.
+                            Mise en application de la méthodologie Agile Scrum : gestion de backlog, sprints et travail collaboratif.
                         </p>
-                        <span
-                            class="text-xs font-semibold bg-gray-100 px-2 py-1 rounded text-gray-600 mb-2 inline-block">Gestion
-                            de Projet</span>
+                        <span class="text-xs font-semibold bg-gray-100 px-2 py-1 rounded text-gray-600 mb-2 inline-block">Gestion de Projet</span>
                     </div>
-                    <a href="https://github.com/bastien-fernandes/M-thode-agile-SCRUM" target="_blank"
-                        class="proof-link text-sm mt-4 block">
-                        <i class="fab fa-github"></i> Voir le dépôt sur GitHub
-                    </a>
+                    <div class="text-sm mt-4 text-blue-600 font-semibold flex items-center">
+                        <i class="fas fa-plus-circle mr-1"></i> Plus d'infos
+                    </div>
                 </div>
 
                 <!-- PROJET 3 : SAE 2.01-2.02 -->
-                <div
-                    class="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-md transition flex flex-col justify-between">
+                <div onclick="openModal('sae201')"
+                    class="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-lg hover:-translate-y-1 transition transform cursor-pointer flex flex-col justify-between group">
                     <div>
                         <div class="flex items-center justify-between mb-4">
-                            <h3 class="font-bold text-lg text-blue-800">SAÉ 2.01 & 2.02 - Algorithmique</h3>
+                            <h3 class="font-bold text-lg text-blue-800 group-hover:text-blue-600 transition">SAÉ 2.01 & 2.02 - Algorithmique</h3>
                             <i class="fas fa-code text-red-500 text-xl"></i>
                         </div>
                         <p class="text-xs text-gray-500 mb-2">Projet de Semestre 2</p>
                         <p class="text-sm text-gray-700 mb-4">
-                            Développement d'une application (SAE 2.01) et exploration algorithmique (SAE 2.02).
-                            Structures de données complexes et optimisation.
+                            Développement d'une application (SAE 2.01) et exploration algorithmique (SAE 2.02). Structures de données complexes et optimisation.
                         </p>
-                        <span
-                            class="text-xs font-semibold bg-gray-100 px-2 py-1 rounded text-gray-600 mb-2 inline-block">Java
-                            / Algo</span>
+                        <span class="text-xs font-semibold bg-gray-100 px-2 py-1 rounded text-gray-600 mb-2 inline-block">Java / Algo</span>
                     </div>
-                    <a href="https://github.com/bastien-fernandes/sae2.01-2.02" target="_blank"
-                        class="proof-link text-sm mt-4 block">
-                        <i class="fab fa-github"></i> Voir le code sur GitHub
-                    </a>
+                    <div class="text-sm mt-4 text-blue-600 font-semibold flex items-center">
+                        <i class="fas fa-plus-circle mr-1"></i> Plus d'infos
+                    </div>
                 </div>
 
                 <!-- PROJET 4 : Portfolio GitHub Pages -->
-                <div
-                    class="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-md transition flex flex-col justify-between">
+                <div onclick="openModal('portfolio')"
+                    class="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-lg hover:-translate-y-1 transition transform cursor-pointer flex flex-col justify-between group">
                     <div>
                         <div class="flex items-center justify-between mb-4">
-                            <h3 class="font-bold text-lg text-blue-800">Portfolio Personnel</h3>
+                            <h3 class="font-bold text-lg text-blue-800 group-hover:text-blue-600 transition">Portfolio Personnel</h3>
                             <i class="fab fa-github text-gray-800 text-xl"></i>
                         </div>
                         <p class="text-xs text-gray-500 mb-2">GitHub Pages</p>
                         <p class="text-sm text-gray-700 mb-4">
                             Le code source de ce site web (CV Numérique), hébergé et déployé via GitHub Pages.
                         </p>
-                        <span
-                            class="text-xs font-semibold bg-gray-100 px-2 py-1 rounded text-gray-600 mb-2 inline-block">Web
-                            / Hébergement</span>
+                        <span class="text-xs font-semibold bg-gray-100 px-2 py-1 rounded text-gray-600 mb-2 inline-block">Web / Hébergement</span>
                     </div>
-                    <a href="https://github.com/Bastien-Fernandes/Bastien-Fernandes.github.io" target="_blank"
-                        class="proof-link text-sm mt-4 block">
-                        <i class="fab fa-github"></i> Voir le repository
-                    </a>
+                    <div class="text-sm mt-4 text-blue-600 font-semibold flex items-center">
+                        <i class="fas fa-plus-circle mr-1"></i> Plus d'infos
+                    </div>
                 </div>
 
             </div>
@@ -384,6 +418,31 @@
     <footer class="bg-gray-800 text-white py-6 mt-auto text-center">
         <p class="text-sm">© 2026 Bastien FERNANDES - CV Numérique</p>
     </footer>
+
+    <!-- MODAL POUR LES PROJETS -->
+    <div id="project-modal" class="fixed inset-0 z-[100] hidden bg-black bg-opacity-60 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl overflow-hidden relative transform transition-all">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-red-500 focus:outline-none transition-colors">
+                <i class="fas fa-times fa-lg"></i>
+            </button>
+            <div class="p-6 sm:p-8">
+                <div class="flex items-center gap-4 mb-2">
+                    <i id="modal-icon" class="fas fa-project-diagram text-blue-500 text-3xl"></i>
+                    <h3 id="modal-title" class="text-2xl font-bold text-gray-800">Titre</h3>
+                </div>
+                <p id="modal-subtitle" class="text-sm font-semibold text-gray-500 mb-6 border-b pb-4">Sous-titre</p>
+                <div id="modal-description" class="text-gray-700 mb-8 space-y-3 leading-relaxed">
+                    Description...
+                </div>
+                <div class="flex justify-end pt-4 border-t">
+                    <button onclick="closeModal()" class="mr-4 px-4 py-2 text-gray-600 hover:text-gray-800 font-semibold transition">Fermer</button>
+                    <a id="modal-link" href="#" target="_blank" class="bg-gray-900 text-white px-5 py-2 rounded shadow hover:bg-gray-800 transition flex items-center gap-2">
+                        <i class="fab fa-github"></i> Voir le code sur GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Lien vers le Script JS -->
     <script src="script.js"></script>
